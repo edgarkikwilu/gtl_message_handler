@@ -23,7 +23,7 @@ public class MessageHandlerService {
 
     @RabbitListener(queues = RabbitMqConfiguration.QUEUE_NAME)
     public void receiveMessage(String message) {
-        System.out.println("Received: " + message);
+        System.out.println("Messagef received from rabbit: " + message);
 
         ContentRowData contentRowData = gson.fromJson(message,ContentRowData.class);
 
